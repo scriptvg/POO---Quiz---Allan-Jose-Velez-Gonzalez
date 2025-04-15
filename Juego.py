@@ -26,13 +26,20 @@ class Juego:
         print(f"Texto cifrado: {texto_cifrado}\n")
         
     def _cifrado_cesar(self, texto, desplazamiento):
-        # Método privado que implementa el algoritmo de cifrado César.
+        # Método que implementa el algoritmo de cifrado César.
         resultado = ""
+        
+        # Diccionario de sustitucion
+        sustitucion = {
+            'a' : '4', 'e' : '3', 'i' : '1', 'o' : '0', 's' : '5',
+        }
+        
         for letra in texto:
             if letra.isalpha():  # Verifica si el carácter es una letra.
                 base = ord('A') if letra.isupper() else ord('a')  # Determina la base según mayúsculas/minúsculas.
                 nueva_letra = chr((ord(letra) - base + desplazamiento) % 26 + base)  # Aplica el desplazamiento.
-                resultado += nueva_letra
+                """ resultado += nueva_letra """
+                resultado += sustitucion.get(nueva_letra, nueva_letra)  # Reemplaza la letra si está en el diccionario.
             else:
                 resultado += letra  # Si no es letra, lo agrega sin cambios.
         return resultado
