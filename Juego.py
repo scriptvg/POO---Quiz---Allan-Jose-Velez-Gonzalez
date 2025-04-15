@@ -9,7 +9,8 @@ class Juego:
         self.jugando = True
         print(f"\n¡Bienvenido al juego, {self.nombre_jugador}!")
         print("El juego ha comenzado..")
-        self.cifrar_texto()  # Llama al método para cifrar texto como parte del flujo del juego.
+        self.cifrar_texto() 
+        # self.ordenar_burbuja()  
         print("¡Gracias por jugar!\n")
         
     def cifrar_texto(self):
