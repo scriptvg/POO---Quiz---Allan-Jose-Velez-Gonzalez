@@ -4,7 +4,8 @@ def mostrar_menu():
     print("=== MENÚ PRINCIPAL ===")
     print("1. Iniciar juego")
     print("2. Cifrado César")
-    print("3. Salir")
+    print("3. Ordenamiento Burbuja")
+    print("4. Salir")
     print("======================")
 
 def main():
@@ -22,6 +23,8 @@ def main():
         elif opcion == "2":
             juego.cifrar_texto()
         elif opcion == "3":
+            juego.ordenar_burbuja()
+        elif opcion == "4":
             juego.salir()
             valor=False
         else:
